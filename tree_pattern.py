@@ -1,5 +1,4 @@
 #tree_pattern.py
-import queue
 import random
 from math import ceil
 rows = int(input("How many Rows: "))
@@ -33,13 +32,17 @@ columns_half = ceil(columns/2)
 def tree_pattern(rows, columns, stars):
     x = list()
     y = list()
+    z = "★ "
     for j in range(0, tree_floors):
         rows_floor = round(rows/(tree_floors-j))
         if j < 1:
             for i in range(1, rows_floor):
                 for k in range(round(((100/rows)/100)*columns*i)):
                     x.append(random.choice(star_bell))
-                print("".join(x).center(columns*2," "))
+                if i == 1:
+                    print((z).center(columns*2," "))
+                else:
+                    print("".join(x).center(columns*2," "))
                 x.clear()      
         else:
             for i in range(round(rows_floor/3), rows_floor):
