@@ -2,10 +2,25 @@
 import queue
 import random
 from math import ceil
-rows = int(input("Wie viele Reihen: "))
-columns = int(input("Wie viele Spalten: "))
-tree_floors = int(input("Wie viele Abstufungen: "))
+rows = int(input("How many Rows: "))
+columns = int(input("How many Columns: "))
+tree_floors = int(input("How many Tree Floors: "))
+while True:
+    star_bell_add = int(input("How many Christmas Balls(1-10): "))
+    if star_bell_add > 10:
+        print("You are not allowed to add more than 10 Christmas Balls")
+    else:
+        break
+
+    green_add = int(input("How many Christmas Balls(1-10): "))
+    if green_add > 10:
+        print("You are not allowed to add more than 10 Twigs")
+    else:
+        break
+
 star_bell = ["* ", "o ", "* "]
+for i in range(star_bell_add):
+    star_bell.append("o ")
 rows_half = round(rows/2)
 columns_half = ceil(columns/2)
 
