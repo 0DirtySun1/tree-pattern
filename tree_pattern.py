@@ -12,6 +12,7 @@ star_bell = ["* ", "$ ", "* "]
 def tree_pattern(rows, columns):
     stars = ""
     x = list()
+    y = list()
     for j in range(0, tree_floors):
         rows_floor = round(rows/(tree_floors-j))
         if j < 1:
@@ -21,11 +22,10 @@ def tree_pattern(rows, columns):
                 print("".join(x).center(columns*2," "))      
         else:
             for i in range(round(rows_floor/3), rows_floor):
-                stars = "* " * round(((100/rows)/100)*columns*i+1))
-                if stars > "* " * columns:
-                    print("* " * columns)
-                else:
-                    print(stars.center(columns*2," "))            
+                for k in range(round(((100/rows)/100)*columns*i)):
+                    y.append(random.choice(star_bell))
+                print("".join(x).center(columns*2," "))    
+
     for i in range(0, rows_half+1):
         stars = "* " * (columns_half-1)
         print(stars.center(columns*2," "))
