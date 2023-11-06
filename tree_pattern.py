@@ -9,12 +9,16 @@ while True:
     star_bell_add = int(input("How many Christmas Balls(1-10): "))
     if star_bell_add > 10:
         print("You are not allowed to add more than 10 Christmas Balls")
+    elif star_bell_add < 1:
+        print("You are not allowed to add less than 1 Christmas Ball")
     else:
         break
 while True:
     green_add = int(input("How many Twigs(1-10): "))
     if green_add > 10:
         print("You are not allowed to add more than 10 Twigs")
+    elif green_add < 1:
+        print("You are not allowed to add less than 1 Twig")
     else:
         break
 
