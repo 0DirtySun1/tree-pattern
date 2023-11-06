@@ -18,9 +18,11 @@ while True:
     else:
         break
 
-star_bell = ["* ", "o ", "* "]
+star_bell = []
 for i in range(star_bell_add):
     star_bell.append("o ")
+for i in range(green_add):
+    star_bell.append("* ")
 rows_half = round(rows/2)
 columns_half = ceil(columns/2)
 
