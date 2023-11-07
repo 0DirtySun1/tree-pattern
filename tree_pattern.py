@@ -23,7 +23,7 @@ while True:
 
 star_bell = []
 for i in range(star_bell_add):
-    star_bell.append("o ")
+    star_bell.append("🕯 ")
 for i in range(green_add):
     star_bell.append("* ")
 rows_half = round(rows/2)
